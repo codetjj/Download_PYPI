@@ -2,10 +2,23 @@ import requests
 import bs4
 import pandas as pd
 from time import sleep
-
+import os
 url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
 name = "./requirements.txt"
 data = pd.read_csv(name, header=None)
+
+if os.path.exists("./packages/"):
+    print("packages路径已存在")
+else:
+    os.mkdir("./packages/")
+
+if os.path.exists("./packages_name/"):
+    print("packages_name路径已存在")
+else:
+    os.mkdir("./packages_name/")
+
+
+
 for i in range(len(data)):
     url_path = url + str(data.iloc[i, 0])
     # 获取依赖包的返回信息
