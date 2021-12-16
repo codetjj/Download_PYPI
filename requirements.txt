@@ -173,5 +173,5 @@ matplotlib
 h5py
 pbr
 mock
-tensorflow_estimator
+tensorflow-estimator
 tensorflow
