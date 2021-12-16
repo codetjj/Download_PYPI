@@ -41,7 +41,7 @@ def file_name(file_dir):
                         urllib.request.urlretrieve(data.iloc[i, 0], filepath)
                     except:
                         with open("testname.txt","a+") as f:
-                            f.write("{}").format(str(data.iloc[i, 0])) 
+                            f.write("{}".format(str(data.iloc[i, 0])))
                     # 礼貌延时
                     sleep(2)
                 # urllib.request.urlretrieve(data.iloc[i,0])
